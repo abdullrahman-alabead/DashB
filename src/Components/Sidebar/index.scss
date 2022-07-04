@@ -1,0 +1,80 @@
+@use '../../variables' as v;
+
+.sidebar{
+background-color: v.$background-color-2;
+width: fit-content;
+.logo{
+  color: v.$main-color;
+  font-family: 'Open Sans Bold' !important;
+
+
+}
+.user{
+  color: v.$main-color;
+  font-family: 'Open Sans';
+  .user-img{
+    width: 2.5rem;
+    position: relative;
+      &:after{
+        content: '';
+        width: 0.8rem;
+        height: 0.8rem;
+        border-radius: 50%;
+        background-color: green;
+        border: 1px solid white;
+        position: absolute;
+        bottom: 0.5rem;
+        right: -0.1rem;
+      }
+    img{
+      width: 100%;
+      
+    }
+    
+  }
+  .user-title{
+    color: v.$text-color;
+  }
+}
+.nav{
+  .nav-links{
+    .nav-link{
+      position: relative;
+      color: v.$text-color;
+      display: flex;
+      align-items: center;
+      padding: 1rem 4rem 1rem 2rem;
+      transition-duration:0.4s ;
+      font-family: 'Open Sans';
+      cursor: pointer;
+      svg{
+        font-size: 1.5rem;
+        margin-right: 1rem;
+      }
+      p{
+        margin: 0;
+        font-weight: bold;
+      }
+      &:hover::after, &.active::after{
+        opacity: 1;
+      }
+      &:hover, &.active{
+        color: v.$main-color;
+
+      }
+      &::after{
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 0.2rem;
+        background-color: v.$main-color;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0rem;
+        transition-duration: 0.4s;
+        opacity: 0;
+      }
+    }
+  }
+}
+}
