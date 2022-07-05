@@ -3,6 +3,7 @@
 .sidebar{
 background-color: v.$background-color-2;
 width: fit-content;
+transition-duration: 1s;
 .logo{
   color: v.$main-color;
   font-family: 'Open Sans Bold' !important;
@@ -36,9 +37,9 @@ width: fit-content;
     color: v.$text-color;
   }
 }
-.nav{
-  .nav-links{
-    .nav-link{
+.side-nav{
+  .side-links{
+    .side-link{
       position: relative;
       color: v.$text-color;
       display: flex;

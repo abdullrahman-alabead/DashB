@@ -1,0 +1,67 @@
+@use '../../variables' as v;
+
+header{
+  color: white;
+  background-color: v.$background-color-2;
+  height: fit-content;
+  .search{
+
+    .bars{
+      background-color: v.$background-color;
+      color: v.$main-color;
+      font-size: 0.1rem;
+      padding: .6rem;
+      width: 1.3rem;
+      height: 1.3rem;
+      cursor: pointer;
+    }
+    .search-bar{
+      background-color: v.$background-color;
+      color: v.$text-color;
+      border: none;
+      padding: 0.4rem 1rem;
+      &:focus{
+        outline: none;
+      }
+    }
+  }
+  #nav-dropdown{
+    color: white;
+    
+  }
+  .user-img{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+  }
+  .dropdown-menu{
+    background-color: v.$background-color-2;
+    .dropdown-item{
+
+      .sent-img, .user-img{
+        margin-right: 0.5rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+      }
+    }
+    .dropdown-item:hover{
+      background-color: v.$background-color;
+    }
+    .note-title, .sent-name{
+      color: white;
+      padding:0;
+      margin: 0;
+    }
+    .note-time, .sent-time{
+      color: v.$text-color;
+      padding: 0;
+      margin: 0;
+    }
+    .see-all{
+      color: white;
+      
+    }
+
+  }
+}

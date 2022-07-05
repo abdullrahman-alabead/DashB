@@ -15,20 +15,11 @@ import {
 import User from "../../assets/images/user.png";
 
 let Sidebar = () => {
-  // Activate Link
-    // add event listener to all nav links
-  let links = document.querySelectorAll(".nav-link");
-  for (let i = 0; i < links.length; i++) {
-    links[i]?.addEventListener("click", (e) => {
-      if(e.currentTarget instanceof EventTarget){
-        activateLink(e.currentTarget)
-      }
-    })
-  }
     // activation funciton
   function activateLink(link: EventTarget) {
+    console.log(link)
     // remove class 'active' from all links
-    let links = document.querySelectorAll(".nav-link");
+    let links = document.querySelectorAll(".side-link");
     for (let i = 0; i < links.length; i++) {
       links[i].classList.remove("active");
     }
@@ -53,30 +44,30 @@ let Sidebar = () => {
           <h6 className="user-title">Owner</h6>
         </div>
       </div>
-      <nav className="nav">
-        <ul className="nav-links p-0">
-          <li className="nav-link">
+      <div className="side-nav">
+        <ul className="side-links p-0">
+          <li className="side-link" onClick={(e) => activateLink(e.currentTarget)}>
             <FontAwesomeIcon icon={faDashboard} />
             <p className="h5">Dashboard</p>
           </li>
-          <li className="nav-link">
+          <li className="side-link" onClick={(e) => activateLink(e.currentTarget)}>
             <FontAwesomeIcon icon={faTh} />
             <p className="h5">Widgets</p>
           </li>
-          <li className="nav-link">
+          <li className="side-link" onClick={(e) => activateLink(e.currentTarget)}>
             <FontAwesomeIcon icon={faKeyboard} />
             <p className="h5">Forms</p>
           </li>
-          <li className="nav-link">
+          <li className="side-link" onClick={(e) => activateLink(e.currentTarget)}>
             <FontAwesomeIcon icon={faTable} />
             <p className="h5">Tables</p>
           </li>
-          <li className="nav-link">
+          <li className="side-link"onClick={(e) => activateLink(e.currentTarget)}>
             <FontAwesomeIcon icon={faBarChart} />
             <p className="h5">Charts</p>
           </li>
         </ul>
-      </nav>
+      </div>
     </div>
   );
 };
