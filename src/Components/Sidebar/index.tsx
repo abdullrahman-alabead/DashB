@@ -30,7 +30,7 @@ let Sidebar = () => {
   }
 
   return (
-    <div className="sidebar d-flex flex-column pt-3  vh-100 position-sticky">
+    <div className="sidebar d-flex flex-column pt-3  vh-100 position-fixed">
       <div className="logo d-flex align-items-center fs-3 mb-4 ps-4">
         <FontAwesomeIcon icon={faChartPie} className="me-2" />
         <h3 className="mb-0 fw-bold">DarkPan</h3>

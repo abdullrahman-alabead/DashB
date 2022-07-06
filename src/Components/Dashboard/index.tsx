@@ -1,6 +1,6 @@
 import { faChartArea, faChartColumn, faChartLine, faMagnifyingGlassChart } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Col, Row } from 'react-bootstrap'
+import { Button, Col, Row } from 'react-bootstrap'
 import { Area, AreaChart, Bar, BarChart, CartesianGrid, Legend, Line, LineChart, Tooltip, XAxis, YAxis } from 'recharts'
 import './index.scss'
 
@@ -116,6 +116,40 @@ let Dashboard = () => {
             </div>
           </Col>
         </Row>
+      </div>
+      <div className="table container-fluid">
+        <table>
+          <thead>
+            <td>Date</td>
+            <td>Invoice</td>
+            <td>Costumer</td>
+            <td>Amount</td>
+            <td>Action</td>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1/11/1111</td>
+              <td>INV/123</td>
+              <td>John Doe</td>
+              <td>123$</td>
+              <td><Button variant='danger' >Details</Button></td>
+            </tr>
+            <tr>
+              <td>1/11/1111</td>
+              <td>INV/123</td>
+              <td>John Doe</td>
+              <td>123$</td>
+              <td><Button variant='danger' >Details</Button></td>
+            </tr>
+            <tr>
+              <td>1/11/1111</td>
+              <td>INV/123</td>
+              <td>John Doe</td>
+              <td>123$</td>
+              <td><Button variant='danger' >Details</Button></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   )

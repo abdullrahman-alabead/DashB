@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <div className="container-fluid position-relative w-100 d-flex p-0">
       <Sidebar />
-      <div className='flex-grow-1'>
+      <div className='flex-grow-1 page-content'>
       <Header />
       <HashRouter>
         <Routes>

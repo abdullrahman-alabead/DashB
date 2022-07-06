@@ -14,9 +14,11 @@ let Header = () => {
   let [toggled, setToggled] = React.useState(false)
   function toggleSidebar() {
     let sideBar = document.querySelector(".sidebar") as HTMLElement
+    let pageContent = document.querySelector(".page-content") as HTMLElement
     console.log(sideBar)
     if(sideBar != null){
       sideBar.style.marginLeft = toggled? '0rem' : '-15rem'
+      pageContent.style.marginLeft = toggled? "239.32px": '0'
       setToggled(prev => !prev)
       
     }

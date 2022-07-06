@@ -31,6 +31,7 @@
     }
   }
   .charts{
+    margin-bottom: 1.5rem;
     .chart-box{
       background-color: v.$background-color-2;
       padding: 1rem 1.5rem;
@@ -47,5 +48,26 @@
       }
     }
     
+  }
+  .table{
+    background-color: v.$background-color-2;
+    padding: 1rem 1.5rem;
+    border-radius: .3rem;
+    table{
+      width: 100%;
+      thead{
+        td{
+          color: white;
+          font-weight: bold;
+          padding: 0.3rem 0.5rem;
+          text-align: start;
+        }
+        
+      }
+      td{
+        padding: 0.3rem 0.5rem;
+        color: v.$text-color;
+      }
+    }
   }
 }
