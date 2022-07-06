@@ -1,0 +1,32 @@
+@use '../../variables' as v;
+
+.dashboard{
+  color: white;
+  .stats{
+    .stat-box{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem 2rem;
+      background-color: v.$background-color-2;
+      border-radius: .3rem;
+      &:not(:last-child){
+        margin-right: 1.5rem;
+      }
+      .stat-icon{
+        color: v.$main-color;
+        font-size: 3rem;
+      }
+      .stat-info{
+        font-weight: bold;
+        .stat-name{
+          color: v.$text-color;
+          margin: 0 0 0.5rem;
+        }
+        .stat-value{
+          margin: 0;
+        }
+      }
+    }
+  }
+}
