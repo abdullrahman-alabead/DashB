@@ -53,6 +53,7 @@
     background-color: v.$background-color-2;
     padding: 1rem 1.5rem;
     border-radius: .3rem;
+    margin-bottom: 1.5rem;
     table{
       width: 100%;
       thead{
@@ -68,6 +69,111 @@
         padding: 0.3rem 0.5rem;
         color: v.$text-color;
       }
+    }
+  }
+  .widgets{
+    margin-bottom: 1.5rem;
+    .widget{
+      background-color: v.$background-color-2;
+      padding: 1rem 1.5rem;
+      border-radius: .3rem;
+      &:not(:last-child){
+        margin-right: 1.5rem;
+      }
+      .widget-name{
+        font-weight: bold;
+        margin-bottom: 2.5rem;
+      }
+    }
+    .calander{
+      
+    }
+    .messages{
+      .message{
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: .8rem 0rem;
+        &:not(:last-child){
+          border-bottom: 1px solid v.$border-color;
+
+        }
+        .user-pic{
+          width: 2.5rem;
+          border-radius: 50%;
+          margin-right: 0.5rem;
+        }
+        .message-info{
+          width: 100%;
+          p{
+            margin: 0;
+          }
+          .message-nt{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: bold;
+            .time{
+              color: v.$text-color;
+              font-weight: normal;
+            }
+          }
+          .message-preview{
+            color: v.$text-color
+          }
+        }
+      }
+    }
+    .todo{
+      .todo-container{
+        .add-task{
+          margin-bottom: 1.5rem;
+          .task-input{
+            color: v.$text-color;
+            &::placeholder{
+              color: v.$text-color
+            }
+            &:focus{
+              outline: none;
+            }
+          }
+        }
+        .tasks{
+          .task{
+            display: flex;
+            align-items: center;
+            padding: 0.5rem 0.5rem 0.5rem 0rem;
+            &:not(:last-child){
+          border-bottom: 1px solid v.$border-color;
+
+            }
+            .completed-check{
+              margin-right: 1.5rem;
+              accent-color: v.$main-color;
+            }
+            .task-text{
+              margin: 0;
+              width: 100%;
+              color: v.$text-color;
+              font-size: 1.1rem;
+            }
+            svg{
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer{
+    background-color: v.$background-color-2;
+    padding: 1rem 1.5rem 0rem 1.5rem;
+    .rights, .designer, .distributer{
+      color: v.$text-color;
+    }
+    span{
+      color: v.$main-color;
     }
   }
 }

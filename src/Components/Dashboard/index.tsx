@@ -1,10 +1,19 @@
-import { faChartArea, faChartColumn, faChartLine, faMagnifyingGlassChart } from '@fortawesome/free-solid-svg-icons'
+import { faChartArea, faChartColumn, faChartLine, faCross, faMagnifyingGlassChart, faTrash, faTrashAlt, faX, faXmark } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Button, Col, Row } from 'react-bootstrap'
 import { Area, AreaChart, Bar, BarChart, CartesianGrid, Legend, Line, LineChart, Tooltip, XAxis, YAxis } from 'recharts'
+import React from 'react'
+import Calendar from 'react-calendar'
+import 'react-calendar/dist/Calendar.css';
+import './calendar.scss'
+import User from '../../assets/images/user.png'
+
+
 import './index.scss'
 
 let Dashboard = () => {
+let [date, setDate] = React.useState(new Date())
+
   const data = [
     {
       name: 'Page A',
@@ -49,7 +58,7 @@ let Dashboard = () => {
       amt: 2100,
     },
   ];  return(
-    <div className="dashboard p-4">
+    <div className="dashboard p-4 pb-0">
       <div className="stats container-fluid ">
         <Row>
           <Col className='stat-box'>
@@ -150,6 +159,112 @@ let Dashboard = () => {
             </tr>
           </tbody>
         </table>
+      </div>
+      <div className="widgets container-fluid">
+        <Row>
+        <Col className='widget messages'>
+            <p className='widget-name'>Messages</p>
+            <div className="messages">
+              <div className="message d-flex align-items-center">
+                <img src={User} alt="pic" className='user-pic' />
+                <div className="message-info">
+                  <div className="message-nt">
+                    <p className="name">Abdullrahman</p>
+                    <p className="time">15 minuts ago</p>
+                  </div>
+                  <p className="message-preview">this is a sample text to preview the...</p>
+                </div>
+              </div>
+              <div className="message d-flex align-items-center">
+                <img src={User} alt="pic" className='user-pic' />
+                <div className="message-info">
+                  <div className="message-nt">
+                    <p className="name">Abdullrahman</p>
+                    <p className="time">15 minuts ago</p>
+                  </div>
+                  <p className="message-preview">this is a sample text to preview the...</p>
+                </div>
+              </div>
+              <div className="message d-flex align-items-center">
+                <img src={User} alt="pic" className='user-pic' />
+                <div className="message-info">
+                  <div className="message-nt">
+                    <p className="name">Abdullrahman</p>
+                    <p className="time">15 minuts ago</p>
+                  </div>
+                  <p className="message-preview">this is a sample text to preview the...</p>
+                </div>
+              </div>
+              <div className="message d-flex align-items-center">
+                <img src={User} alt="pic" className='user-pic' />
+                <div className="message-info">
+                  <div className="message-nt">
+                    <p className="name">Abdullrahman</p>
+                    <p className="time">15 minuts ago</p>
+                  </div>
+                  <p className="message-preview">this is a sample text to preview the...</p>
+                </div>
+              </div>
+            </div>
+          </Col>
+          <Col className='widget calendar'>
+            <p className='widget-name'>Calendar</p>
+            <div className='calendar-container'>
+              <Calendar onChange={setDate} value={date} />
+            </div>
+          </Col>
+          
+          <Col className='widget todo'>
+            <p className='widget-name'>To-Do List</p>
+            <div className="todo-container">
+              <div className="add-task w-100 d-flex align-items-center">
+              <input type="text" placeholder='Add Task...' className='task-input w-100 bg-black border-0 py-2 px-3 me-2 rounded' />
+              <Button variant='danger'>Add</Button>
+              </div>
+              <ul className="tasks p-0">
+                <li className="task">
+                  <input type="checkbox" className='completed-check' />
+                  <p className="task-text">Short Task Goes Here...</p>
+                  <FontAwesomeIcon icon={faXmark} />
+                  
+                </li>
+                <li className="task">
+                  <input type="checkbox" className='completed-check' />
+                  <p className="task-text">Short Task Goes Here...</p>
+                  <FontAwesomeIcon icon={faXmark} />
+                  
+                </li>
+                <li className="task">
+                  <input type="checkbox" className='completed-check' />
+                  <p className="task-text">Short Task Goes Here...</p>
+                  <FontAwesomeIcon icon={faXmark} />
+                  
+                </li>
+                <li className="task">
+                  <input type="checkbox" className='completed-check' />
+                  <p className="task-text">Short Task Goes Here...</p>
+                  <FontAwesomeIcon icon={faXmark} />
+                  
+                </li>
+                <li className="task">
+                  <input type="checkbox" className='completed-check' />
+                  <p className="task-text">Short Task Goes Here...</p>
+                  <FontAwesomeIcon icon={faXmark} />
+                  
+                </li>
+              </ul>
+            
+            </div>
+          </Col>
+        </Row>
+        
+      </div>
+      <div className="footer container-fluid d-flex align-items-start justify-content-between rounded">
+        <p className="rights">&copy; <span> Your Site Name</span>, All Right Reserved.</p>
+        <div className="creators text-end">
+          <p className="designer mb-1">Designed By <span>HTML Codex</span></p>
+          <p className="distributer">Distributed by <span>ThemeWagon</span></p>
+        </div>
       </div>
     </div>
   )
