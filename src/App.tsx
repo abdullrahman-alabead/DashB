@@ -12,11 +12,9 @@ function App() {
       <Sidebar />
       <div className='flex-grow-1 page-content'>
       <Header />
-      <HashRouter>
         <Routes>
           <Route path='/dashboard' element={<Dashboard />} />
         </Routes>
-      </HashRouter>
       </div>
       </div>
     </div>

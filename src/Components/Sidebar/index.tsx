@@ -13,11 +13,13 @@ import {
   faUserEdit,
 } from "@fortawesome/free-solid-svg-icons";
 import User from "../../assets/images/user.png";
+import { useNavigate } from 'react-router-dom'
 
 let Sidebar = () => {
     // activation funciton
-  function activateLink(link: EventTarget) {
-    console.log(link)
+  function activateLink(link: EventTarget, to: string) {
+    // navigate to the pressed link
+    navigate(to)
     // remove class 'active' from all links
     let links = document.querySelectorAll(".side-link");
     for (let i = 0; i < links.length; i++) {
@@ -28,6 +30,9 @@ let Sidebar = () => {
       link.classList.add("active");
     }
   }
+
+  // Page Navigation
+  let navigate = useNavigate()
 
   return (
     <div className="sidebar d-flex flex-column pt-3  vh-100 position-fixed">
@@ -46,23 +51,23 @@ let Sidebar = () => {
       </div>
       <div className="side-nav">
         <ul className="side-links p-0">
-          <li className="side-link" onClick={(e) => activateLink(e.currentTarget)}>
+          <li className="side-link" onClick={(e) => {activateLink(e.currentTarget, "/dashboard")}}>
             <FontAwesomeIcon icon={faDashboard} />
             <p className="h5">Dashboard</p>
           </li>
-          <li className="side-link" onClick={(e) => activateLink(e.currentTarget)}>
+          <li className="side-link" onClick={(e) => activateLink(e.currentTarget, "/widgets")}>
             <FontAwesomeIcon icon={faTh} />
             <p className="h5">Widgets</p>
           </li>
-          <li className="side-link" onClick={(e) => activateLink(e.currentTarget)}>
+          <li className="side-link" onClick={(e) => activateLink(e.currentTarget, "/forms")}>
             <FontAwesomeIcon icon={faKeyboard} />
             <p className="h5">Forms</p>
           </li>
-          <li className="side-link" onClick={(e) => activateLink(e.currentTarget)}>
+          <li className="side-link" onClick={(e) => activateLink(e.currentTarget, "/tables")}>
             <FontAwesomeIcon icon={faTable} />
             <p className="h5">Tables</p>
           </li>
-          <li className="side-link"onClick={(e) => activateLink(e.currentTarget)}>
+          <li className="side-link"onClick={(e) => activateLink(e.currentTarget, "/charts")}>
             <FontAwesomeIcon icon={faBarChart} />
             <p className="h5">Charts</p>
           </li>

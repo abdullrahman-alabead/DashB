@@ -7,8 +7,6 @@ import Calendar from 'react-calendar'
 import 'react-calendar/dist/Calendar.css';
 import './calendar.scss'
 import User from '../../assets/images/user.png'
-
-
 import './index.scss'
 
 let Dashboard = () => {
