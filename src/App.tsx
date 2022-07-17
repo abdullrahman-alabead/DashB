@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Sidebar from './Components/Sidebar';
 import Header from './Components/Header';
 import Dashboard from './Components/Dashboard';
+import Widgets from './Components/Widgets';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Header />
         <Routes>
           <Route path='/dashboard' element={<Dashboard />} />
+          <Route path='/widgets' element={<Widgets />} />
         </Routes>
       </div>
       </div>
