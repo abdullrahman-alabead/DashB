@@ -1,0 +1,42 @@
+@use '../../variables' as v;
+.form{
+  background-color: v.$background-color-2;
+  color: v.$text-color;
+  padding: 1rem 1.5rem;
+  border-radius: .3rem;
+
+input, textarea{
+  background-color: v.$background-color;
+  color: v.$text-color;
+  padding: .5rem;
+  border: none;
+  border-radius: .3rem;
+  &:focus{
+    outline: none;
+  }
+  &::placeholder{
+    color: v.$text-color;
+  }
+}
+
+.checkbox{
+  position: relative;
+  accent-color: v.$main-color;
+  &::after{
+    position: absolute;
+    content: 'Check me out';
+    width: 15ch;
+    top: 45%;
+    transform: translateY(-50%);
+    left: 1.5rem;
+  }
+}
+
+form{
+  p{
+    margin-bottom: .5rem;
+    font-size: 1.1rem;
+  }
+}
+
+}

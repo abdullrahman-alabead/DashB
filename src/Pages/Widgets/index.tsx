@@ -1,11 +1,11 @@
 import { Col, Row } from 'react-bootstrap'
-import Calendar from '../Calendar'
-import Messages from '../Messages'
-import Todo from '../Todo'
-import Testimonials from '../Testimonials/Testimonials'
-import GoogleMap from '../GoogleMap/GoogleMap'
+import Calendar from '../../Components/Calendar'
+import Messages from '../../Components/Messages'
+import Todo from '../../Components/Todo'
+import Testimonials from '../../Components/Testimonials/Testimonials'
+import GoogleMap from '../../Components/GoogleMap/GoogleMap'
 import './index.scss'
-import Footer from '../Footer'
+import Footer from '../../Components/Footer'
 
 let Widgets = () => {
   return (

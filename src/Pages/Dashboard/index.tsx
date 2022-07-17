@@ -2,10 +2,10 @@ import { faChartArea, faChartColumn, faChartLine, faCross, faMagnifyingGlassChar
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Button, Col, Row } from 'react-bootstrap'
 import { Area, AreaChart, Bar, BarChart, CartesianGrid, Legend, Line, LineChart, Tooltip, XAxis, YAxis } from 'recharts'
-import Calendar from '../Calendar'
-import Messages from '../Messages'
-import Todo from '../Todo'
-import Footer from '../Footer'
+import Calendar from '../../Components/Calendar'
+import Messages from '../../Components/Messages'
+import Todo from '../../Components/Todo'
+import Footer from '../../Components/Footer'
 import './index.scss'
 
 let Dashboard = () => {

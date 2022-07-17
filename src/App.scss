@@ -18,6 +18,12 @@ a{
   transition-duration: 1s;
  }
 
+ .widget-name, .form-name{
+  font-weight: bold;
+  margin-bottom: 2.5rem;
+  color: white;
+}
+
  @font-face{
   font-family: 'Open Sans';
   src: url('./assets/fonts/OpenSans-Regular.ttf');
