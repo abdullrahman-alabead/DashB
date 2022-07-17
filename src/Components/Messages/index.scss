@@ -1,0 +1,42 @@
+@use '../../variables' as v;
+
+.messages{
+  .message{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: .8rem 0rem;
+    &:not(:last-child){
+      border-bottom: 1px solid v.$border-color;
+
+    }
+    .user-pic{
+      width: 2.5rem;
+      border-radius: 50%;
+      margin-right: 0.5rem;
+    }
+    .message-info{
+      width: 100%;
+      p{
+        margin: 0;
+      }
+      .message-nt{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: bold;
+        .name{
+          color: white;
+        }
+        .time{
+          color: v.$text-color;
+          font-weight: normal;
+        }
+      }
+      .message-preview{
+        color: v.$text-color
+      }
+    }
+  }
+}

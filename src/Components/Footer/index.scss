@@ -1,0 +1,12 @@
+@use '../../variables' as v;
+
+.footer{
+  background-color: v.$background-color-2;
+  padding: 1rem 1.5rem 0rem 1.5rem;
+  .rights, .designer, .distributer{
+    color: v.$text-color;
+  }
+  span{
+    color: v.$main-color;
+  }
+}

@@ -1,0 +1,64 @@
+@use '../../variables' as v;
+
+.react-calendar {
+  background: transparent;
+  border: none;
+}
+.react-calendar button {
+  color: v.$text-color;
+}
+.react-calendar button:enabled:hover {
+  color: v.$text-color;
+}
+.react-calendar__navigation button {
+  color: v.$text-color;
+}
+.react-calendar__navigation button:disabled {
+  background-color: white;
+  color: v.$text-color;
+}
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+  color: v.$text-color
+}
+.react-calendar__month-view__days__day--weekend {
+  color: v.$text-color;
+}
+.react-calendar__month-view__days__day--neighboringMonth {
+  color: v.$text-color;
+}
+.react-calendar__tile:disabled {
+  background-color: white;
+  color: v.$text-color;
+}
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+  background-color: white;
+  color: v.$text-color;
+}
+.react-calendar__tile--now{
+  background-color: white;
+}
+
+.react-calendar__tile--hasActive {
+  background: white;
+  color: v.$text-color;
+}
+.react-calendar__tile--hasActive:enabled:hover,
+.react-calendar__tile--hasActive:enabled:focus {
+  background: white;
+  color: v.$text-color;
+}
+.react-calendar__tile--active {
+  background: white;
+  color: v.$text-color;
+}
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+  background: white;
+  color: v.$text-color
+}
+.react-calendar--selectRange .react-calendar__tile--hover {
+  background-color: white;
+  color: v.$text-color;
+}

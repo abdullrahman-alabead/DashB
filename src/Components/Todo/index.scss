@@ -1,0 +1,42 @@
+@use '../../variables' as v ;
+
+.todo{
+  .todo-container{
+    .add-task{
+      margin-bottom: 1.5rem;
+      .task-input{
+        color: v.$text-color;
+        &::placeholder{
+          color: v.$text-color
+        }
+        &:focus{
+          outline: none;
+        }
+      }
+    }
+    .tasks{
+      .task{
+        display: flex;
+        align-items: center;
+        padding: 0.5rem 0.5rem 0.5rem 0rem;
+        &:not(:last-child){
+      border-bottom: 1px solid v.$border-color;
+
+        }
+        .completed-check{
+          margin-right: 1.5rem;
+          accent-color: v.$main-color;
+        }
+        .task-text{
+          margin: 0;
+          width: 100%;
+          color: v.$text-color;
+          font-size: 1.1rem;
+        }
+        svg{
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.googleMap{
+  iframe{
+
+    filter: grayscale(1);
+    transition-duration: .5s;
+    &:hover{
+      filter: none;
+    }
+  }
+}
