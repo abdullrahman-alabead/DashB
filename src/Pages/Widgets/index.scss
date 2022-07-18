@@ -1,6 +1,5 @@
 @use '../../variables' as v;
-.widgets-row{
-  margin-bottom: 1.5rem;
+  
   .widget{
     background-color: v.$background-color-2;
     padding: 1rem 1.5rem;
@@ -10,4 +9,3 @@
     }
     
   }
-}

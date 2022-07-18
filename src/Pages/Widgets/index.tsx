@@ -11,12 +11,12 @@ let Widgets = () => {
   return (
     <div className='container-fluid p-4 pb-0'>
       <div className='widgets container-fluid'>
-      <Row className='widgets-row'>
+      <Row className='row'>
         <Messages />
         <Calendar />
         <Todo />
       </Row>
-      <Row className='widgets-row'>
+      <Row className='row'>
       <Testimonials />
       <GoogleMap />
       </Row>

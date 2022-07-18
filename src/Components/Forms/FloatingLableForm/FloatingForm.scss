@@ -1,0 +1,20 @@
+@use '../../../variables' as v;
+
+.floatingForm{
+  input, textarea, select {
+    padding: 1rem;
+    &:focus{
+      background-color: black;
+      border-color: v.$main-color;
+    }
+  }
+  select{
+    background-color: black;
+    color: v.$text-color;
+    border: none;
+    border-radius: .3rem;
+    &:focus{
+      outline: none;
+    }
+  }
+}
