@@ -5,6 +5,7 @@ import Header from './Components/Header';
 import Dashboard from './Pages/Dashboard';
 import Widgets from './Pages/Widgets';
 import Forms from './Pages/Forms/Forms';
+import Charts from './Pages/Charts/Charts';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path='/dashboard' element={<Dashboard />} />
           <Route path='/widgets' element={<Widgets />} />
           <Route path='/forms' element={<Forms />} />
+          <Route path='/charts' element={<Charts />} />
         </Routes>
       </div>
       </div>

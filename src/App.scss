@@ -20,12 +20,18 @@ a{
   transition-duration: 1s;
  }
 
- .widget-name, .form-name{
+ .widget-name, .form-name, .chart-name{
   font-weight: bold;
   margin-bottom: 2.5rem;
   color: white;
 }
 
+.form, .table, .widget, .chart{
+  background-color: v.$background-color-2;
+  color: v.$text-color;
+  padding: 1rem 1.5rem;
+  border-radius: .3rem;
+}
 button{
   background-color: v.$main-color;
   border: none;

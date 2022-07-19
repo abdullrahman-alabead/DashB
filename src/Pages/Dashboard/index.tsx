@@ -6,54 +6,12 @@ import Calendar from '../../Components/Calendar'
 import Messages from '../../Components/Messages'
 import Todo from '../../Components/Todo'
 import Footer from '../../Components/Footer'
+import data from '../../assets/data'
 import './index.scss'
 
 let Dashboard = () => {
-
-  const data = [
-    {
-      name: 'Page A',
-      uv: 4000,
-      pv: 2400,
-      amt: 2400,
-    },
-    {
-      name: 'Page B',
-      uv: 3000,
-      pv: 1398,
-      amt: 2210,
-    },
-    {
-      name: 'Page C',
-      uv: 2000,
-      pv: 9800,
-      amt: 2290,
-    },
-    {
-      name: 'Page D',
-      uv: 2780,
-      pv: 3908,
-      amt: 2000,
-    },
-    {
-      name: 'Page E',
-      uv: 1890,
-      pv: 4800,
-      amt: 2181,
-    },
-    {
-      name: 'Page F',
-      uv: 2390,
-      pv: 3800,
-      amt: 2500,
-    },
-    {
-      name: 'Page G',
-      uv: 3490,
-      pv: 4300,
-      amt: 2100,
-    },
-  ];  return(
+  
+  return(
     <div className="dashboard p-4 pb-0">
       <div className="stats container-fluid ">
         <Row>
@@ -91,7 +49,6 @@ let Dashboard = () => {
         <Row>
           <Col className='chart-box'>
             <p className="chart-name">WorldWide Sales</p>
-            <div className="chart">
               <BarChart width={550} height={250} data={data} >
                 <CartesianGrid strokeDasharray='4 6' />
                 <XAxis dataKey='name' />
@@ -101,11 +58,9 @@ let Dashboard = () => {
                 <Bar dataKey='uv' fill="#003b20" />
                 <Bar dataKey='pv' fill="#008f11" />
               </BarChart>
-            </div>
           </Col>
           <Col className='chart-box'>
             <p className="chart-name">Salse & Revenue</p>
-            <div className="chart">
               <AreaChart width={550} height={250} data={data} >
                 <CartesianGrid strokeDasharray='4 6' />
                 <XAxis dataKey='name' />
@@ -118,7 +73,6 @@ let Dashboard = () => {
 
               </AreaChart>
               
-            </div>
           </Col>
         </Row>
       </div>

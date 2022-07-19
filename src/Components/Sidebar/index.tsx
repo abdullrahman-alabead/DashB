@@ -63,10 +63,6 @@ let Sidebar = () => {
             <FontAwesomeIcon icon={faKeyboard} />
             <p className="h5">Forms</p>
           </li>
-          <li className="side-link" onClick={(e) => activateLink(e.currentTarget, "/tables")}>
-            <FontAwesomeIcon icon={faTable} />
-            <p className="h5">Tables</p>
-          </li>
           <li className="side-link"onClick={(e) => activateLink(e.currentTarget, "/charts")}>
             <FontAwesomeIcon icon={faBarChart} />
             <p className="h5">Charts</p>
