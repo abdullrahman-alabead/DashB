@@ -5,6 +5,9 @@ import HorizontalForm from '../../Components/Forms/HorizontalForm/HorizontalForm
 import FloatingForm from '../../Components/Forms/FloatingLableForm/FloatinForm'
 import FilesForm from '../../Components/Forms/FilesForm/FilesForm'
 import SelectForm from '../../Components/Forms/SelectForm/SelectForm'
+import RadiosForm from '../../Components/Forms/RadiosForm/RadiosForm'
+import GroupForm from '../../Components/Forms/InputGroupForm/GroupForm'
+import SizingForm from '../../Components/Forms/SizingForm/SizingForm'
 
 import { Col, Row } from 'react-bootstrap'
 
@@ -32,7 +35,15 @@ let Forms = () => {
         <SelectForm />
         </Col>
         <Col>
-        <SelectForm />
+        <RadiosForm />
+        </Col>
+      </Row>
+      <Row className='row'>
+        <Col>
+        <GroupForm />
+        </Col>
+        <Col>
+        <SizingForm />
         </Col>
       </Row>
     </div>
