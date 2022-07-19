@@ -4,6 +4,7 @@ import BarCH from '../../Components/Charts/BarCH/BarCH'
 import LineCH from '../../Components/Charts/LineChart/LineCH'
 import PieCH from '../../Components/Charts/PieCH/PieCH'
 import RadarCH from '../../Components/Charts/RadarCH/RadarCH'
+import Footer from '../../Components/Footer'
 import './Charts.scss'
 
 let Charts = () => {
@@ -30,6 +31,7 @@ let Charts = () => {
         <RadarCH />
         </Col>
       </Row>
+      <Footer />
     </div>
   )
 }
